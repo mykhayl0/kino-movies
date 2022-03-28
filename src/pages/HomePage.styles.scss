@@ -1,0 +1,58 @@
+@import '../_variables';
+@import '../mixins';
+
+.homepage-header {
+  h3{
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: $mobile-margin;
+    color: white;
+    border-bottom: 2px solid $red-colour;
+    
+    .accent-yellow{
+      color: $yellow-colour;
+    }
+  }
+}
+
+.homepage-movie-tile {
+  margin: 0 auto;
+  margin-bottom: 1.5rem;
+}
+
+.home-page-filter-desktop {
+  margin-bottom: 2rem;
+}
+
+@media only screen and (min-width: $tabletSml) {
+
+  .homepage-header {
+    h3{
+      font-size: 2rem;
+      margin-top: 0;
+      margin-bottom: $mobile-margin;
+      color: white;
+      border-bottom: 2px solid $red-colour;
+      
+      .accent-yellow{
+        color: $yellow-colour;
+      }
+    }
+  }
+
+  .movies-list {
+    column-gap: 20px;
+    display: flex;
+    flex-basis: content;
+    flex-direction: row;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 20px;
+
+    .homepage-movie-tile {
+      margin: 0;
+    }
+  }
+}

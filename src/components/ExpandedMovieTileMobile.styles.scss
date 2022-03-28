@@ -1,0 +1,125 @@
+@import '../_variables';
+@import '../_mixins';
+
+.no-overflow-expanded {
+  overflow: hidden !important;
+}
+
+.overlay-expanded {
+  background-color: rgba(26,23,23);
+
+  .movie-title-expanded {
+    text-align: center;
+    color: $yellow-colour;
+    margin-top: 0.25rem;
+    width: 257px;
+  }
+}
+
+.expanded-div {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+}
+
+.expanded-tile {
+  width: calc(206px * 1.25);
+  height: calc(304px * 1.25);
+  background: rgb(60,48,48);
+  background: linear-gradient(45deg, rgba(60,48,48,1) 0%, rgba(26,23,23,1) 50%);
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: $hover-shadow;
+
+  .top-sec {
+    display: flex;
+    justify-content: space-between;
+    .genre {
+      margin: 0;
+      color: $yellow-colour;
+      font-size: 1rem;
+      width: 200px;
+    }
+  }
+
+  .close-expanded {
+    width: 30px;
+    cursor: pointer;
+  }
+
+  .movie-info-expanded {
+    margin-top: calc($mobile-margin * 2);
+
+    p {
+      margin: 0;
+      color: $red-colour;
+      font-size: 12px;
+    }
+  }
+
+  .synopsis-text {
+    font-family: proxima-nova, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 120px;
+    color: white;
+    line-height: 1.25;
+  }
+
+  h2 {
+    color: $yellow-colour;
+    display: block;
+    text-align: center;
+  }
+
+  .more-info {
+    display: flex;
+    background-color: #DFCA4E;
+    color: #1A1717;
+    border: none;
+    border-radius: 15px;
+    width: 80px;
+    height: 30px;
+    margin: 0 auto;
+    font-size: 1rem;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      color: $red-colour;
+      box-shadow: $hover-shadow;
+    }
+  }
+
+  .yellow-accent {
+    color: $yellow-colour;
+  }
+}
+
+@media only screen and (min-width: $mobileMed){
+  .expanded-tile {
+    width: 258px * 1.1;
+    height: 380px * 1.1;
+    .top-sec {
+      .genre {
+        font-size: 1.25rem;
+      }
+    }
+
+    .more-info {
+      font-size: 1.5rem;
+      height: 40px;
+      width: 100px;
+      border-radius: 20px;
+    }
+
+    .movie-info-expanded p{
+     font-size: 1rem; 
+    }
+  }
+}

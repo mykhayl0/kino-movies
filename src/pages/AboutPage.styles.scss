@@ -1,0 +1,245 @@
+@import '../_variables';
+@import '../_mixins';
+
+* {
+  font-family: cubano, sans-serif;
+  font-style: normal;
+}
+
+.about-header {
+  h3 {
+    font-size: 1.5rem;
+    color: white;
+    margin-top: 0;
+    border-bottom: 2px solid $red-colour;
+    margin-bottom: $mobile-margin;
+
+    .accent-yellow {
+      color: $yellow-colour;
+    }
+  }
+}
+
+.about-intro {
+  h3 {
+    font-size: 1.5rem;
+    color: $yellow-colour;
+    margin-top: 0;
+    text-align: center;
+    margin-bottom: $mobile-margin;
+    margin-top: $mobile-margin;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  img {
+    width: 100px;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: $mobile-margin;
+    flex-grow: 1;
+  }
+
+  p {
+    font-family: proxima-nova, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    color: white;
+    line-height: 1.5;
+    margin: 0;
+    flex-grow: 3;
+  }
+}
+
+.about-money {
+  h3 {
+    font-size: 1.5rem;
+    color: $yellow-colour;
+    margin-bottom: $mobile-margin;
+    margin-top: calc($mobile-margin * 3);
+  }
+
+  p {
+    font-family: proxima-nova, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    color: white;
+    line-height: 1.5;
+    margin: 0;
+  }
+}
+
+.about-attribute {
+  h3 {
+    font-size: 1.5rem;
+    color: $yellow-colour;
+    margin-bottom: $mobile-margin;
+    margin-top: calc($mobile-margin * 3);
+  }
+
+  .tmdb-div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    p {
+      font-family: proxima-nova, sans-serif;
+      font-weight: 300;
+      font-style: normal;
+      color: white;
+      line-height: 1.5;
+      margin: 0;
+      padding-right: 1rem;
+    }
+
+    img {
+      width: 80px;
+    }
+  }
+}
+
+.about-functionality {
+  font-size: 1rem;
+  color: $yellow-colour;
+  margin-bottom: $mobile-margin;
+  margin-top: calc($mobile-margin * 3);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  .about-favourites {
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+
+    h3 {
+      width: 66%;
+      flex-shrink: 0;
+      margin: 0;
+    }
+    img {
+      width: 50px;
+      box-shadow: 0px 0px 25px 5px #BC2026;
+      border-radius: 50%;
+    }
+  }
+
+  .about-app {
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+
+    h3 {
+      width: 66%;
+      flex-shrink: 0;
+      margin: 0;
+    }
+    img {
+      width: 50px;
+    }
+  }
+
+  .about-email {
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+
+    h3 {
+      width: 50%;
+      flex-shrink: 0;
+      margin: 0;
+    }
+
+    a {
+      border: 3px solid white;
+      border-radius: 20px;
+      color: white;
+      text-decoration: none;
+      width: 100px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:hover {
+        background-color: white;
+        color: $dark-brown-colour;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $mobileMed) {
+  .about-intro {
+    h3 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    img {
+      width: 150px;
+    }
+  }
+  .about-attribute{
+    .tmdb-div {
+      img {
+        width: 30px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $tabletSml) {
+  .about-header {
+    h3 {
+      font-size: 2rem;
+      color: white;
+      margin-top: 0;
+      border-bottom: 2px solid $red-colour;
+      margin-bottom: $mobile-margin;
+  
+      .accent-yellow {
+        color: $yellow-colour;
+      }
+    }
+  }
+
+  .about-functionality {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 6rem;
+
+    .about-favourites {
+      h3 {
+        font-size: 1.5rem;
+        width: 300px;
+        text-align: center;
+      }
+      img {
+        margin-right: 50px;
+      }
+    }
+    .about-app {
+      h3 {
+        font-size: 1.5rem;
+        width: 300px;
+        text-align: center;
+      }
+      img {
+        margin-right: 50px;
+      }
+    }
+    .about-email {
+      h3 {
+        font-size: 1.5rem;
+        width: 300px;
+        text-align: center;
+      }
+      a {
+        margin-right: 25px;
+      }
+    }
+  }
+}

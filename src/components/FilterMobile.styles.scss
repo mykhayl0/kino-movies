@@ -1,0 +1,70 @@
+@import '../_variables';
+@import '../mixins';
+
+.filter-btn-div {
+  display: flex;
+  margin-bottom: 13px;
+  position: relative;
+  min-width: 304px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+
+  .filter-btn {
+    background-color: transparent;
+    border: none;
+    flex-grow: 1;
+    color: $yellow-colour;
+    font-family: cubano, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+  }
+
+  .filter-btn-selected {
+    color: $red-colour;
+  }
+}
+
+.filter-circle-div {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  z-index: 10;
+  position: relative;
+  margin-bottom: 13px;
+
+  .filter-circle {
+    width: 10px;
+    height: 10px;
+    border: 2px solid $red-colour;
+    border-radius: 20px;
+    display: inline-block;
+    margin: 3px;
+    transition: background-color 0.5s ease-in-out;
+  }
+
+  .filter-circle-selected {
+    background-color: $red-colour;
+  }
+}
+
+@media only screen and (min-width: $mobileMed) {
+  
+  .filter-btn-div {
+    .filter-btn {
+      font-size: 15px;
+    }
+  }
+}
+
+@media only screen and (min-width: $mobileLrg) {
+
+  .filter-btn-div {
+    .filter-btn {
+      font-size: 16px;
+    }
+  }
+}

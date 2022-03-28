@@ -1,0 +1,52 @@
+@import '../_variables';
+@import '../mixins';
+
+.header-menu {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 13px;
+  align-items: center;
+
+  .hamburger-button {
+    background-color: transparent;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 5px;
+    cursor: pointer;
+
+    div {
+      width: 35px;
+      height: 3px;
+      background-color: $yellow-colour;
+      border-radius: 15px;
+    }
+  }
+
+  .kino-logo-home-wide {
+    display: none;
+  }
+
+  .kino-logo-home-short {
+    width: 50px;
+  }
+
+  a {
+    line-height: 0;
+  }
+}
+
+@media only screen and (min-width: $tabletSml) {
+  
+  .header-menu {
+    .kino-logo-home-short {
+      display: none;
+    }
+  
+    .kino-logo-home-wide {
+      display: block;
+      height: 90px;
+    }
+  }
+}

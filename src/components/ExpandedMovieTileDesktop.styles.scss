@@ -1,0 +1,147 @@
+@import '../_variables';
+@import '../_mixins';
+
+.no-overflow-expanded-desktop {
+  overflow: hidden !important;
+}
+
+.overlay-expanded-desktop {
+  align-items: center;
+  background-color: rgba(26, 23, 23);
+  display: flex;
+  justify-content: center;
+
+  .expanded-x-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .close-expanded-desktop {
+    width: 30px;
+    align-self: flex-end;
+  }
+
+  .expanded-tile-desktop {
+    background-color: $dark-brown-colour;
+    width: 700px;
+    height: auto;
+    background: linear-gradient(45deg, #3c3030 0%, #1a1717 50%);
+    border-radius: 10px;
+    box-shadow: $hover-shadow;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    align-items: flex-start;
+    gap: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+
+    .inner-content {
+      display: flex;
+      flex-direction: row;
+      gap: 30px;
+
+      .poster-favourite {
+        position: relative;
+
+        .expanded-favourite-button-desktop {
+          border: none;
+          background-color: transparent;
+          padding: 0;
+          line-height: 0;
+          position: absolute;
+          top: 0;
+          right: 0;
+
+          img.is-favourite {
+            box-shadow: 0px 0px 25px 5px #bc2026;
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+  
+    .expanded-poster {
+      width: 196px;
+      height: 294px;
+      object-fit: cover;
+      border: 5px solid $dark-brown-colour;
+      border-radius: 10px;
+    }
+
+    .expanded-content-wrapper {
+      display: flex;
+      flex-direction: column;
+
+      .expanded-movie-info {
+        height: auto;
+      
+        .expanded-movie-title-desktop {
+          margin: 0;
+          color: $yellow-colour;
+        }
+
+        .expanded-genre-list {
+          .genre{
+            margin: 0;
+            color: $red-colour;
+            font-size: 1.25rem;
+          }
+
+          .released {
+            color: $red-colour;
+            .desktop-yellow-accent {
+              color: $yellow-colour;
+            }
+          }
+        }
+
+        .expanded-synopsis {
+          h2 {
+            margin-top: 2rem;
+            color: $yellow-colour;
+          }
+
+          .synopsis-text {
+            font-family: proxima-nova, sans-serif;
+            font-weight: 300;
+            font-style: normal;
+            color: white;
+          }
+        }
+
+        .expanded-pills {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+
+          .expanded-rating {
+            color: white;
+            border: 3px solid $red-colour;
+            border-radius: 20px;
+            width: fit-content;
+            padding: 10px;
+          }
+
+          .more-info-desktop {
+            color: white;
+            border: 3px solid $yellow-colour;
+            border-radius: 20px;
+            width: fit-content;
+            padding: 10px;
+            text-decoration: none;
+            height: fit-content;
+
+            &:hover {
+              background-color: $yellow-colour;
+              color: $dark-brown-colour;
+            }
+          }
+        }
+      }
+    }
+  }
+}

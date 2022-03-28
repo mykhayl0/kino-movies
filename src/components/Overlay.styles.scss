@@ -1,0 +1,36 @@
+.overlay-content {
+  animation: overlay-show 0.4s ease-in-out;
+  background-color: rgba(17, 14, 14, 0.5);
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+
+  &.hidden {
+    animation: overlay-hide 0.4s ease-in-out;
+    display: none;
+    opacity: 0;
+  }
+}
+
+@keyframes overlay-show {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes overlay-hide {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}

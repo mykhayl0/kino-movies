@@ -1,0 +1,25 @@
+@import '../_variables';
+
+.spinner-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.loading-spinner {
+  width: 120px;
+  margin: 0 auto;
+  display: block;
+}
+
+.loading-message {
+  font-family: cubano, sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  color: $yellow-colour;
+  text-align: center;
+}
+
+.loading-cat {
+  color: $red-colour;
+}

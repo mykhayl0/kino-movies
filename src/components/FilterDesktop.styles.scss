@@ -1,0 +1,121 @@
+@import '../variables';
+
+.filter-desktop-container {
+  font-family: cubano, sans-serif;
+  color: $yellow-colour;
+  font-size: 24px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid $red-colour;
+  align-items: flex-end;
+
+  &.open {
+    .filter-desktop-action-wrapper {
+      z-index: 100;
+    }
+
+    .filter-desktop-toggle {
+      color: $red-colour;
+    }
+
+    .filter-desktop-option-list {
+      animation: filter-desktop-show-list 0.4s ease-in-out;
+      display: block;
+    }
+  }
+
+  .filter-desktop-current {
+    margin: 0;
+    font-size: 2rem;
+  }
+
+  .filter-desktop-action-wrapper {
+    position: relative;
+    flex-grow: 0;
+  }
+
+  .filter-desktop-btn {
+    background-color: transparent;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    font-size: inherit;
+    padding: 0;
+    transition: color 0.2s ease-in-out;
+
+    &:hover {
+      color: $red-colour;
+    }
+  }
+
+  .filter-desktop-toggle {
+    align-items: center;
+    display: flex;
+    font-size: 22px;
+  }
+
+  .filter-desktop-icon {
+    height: 22px;
+    width: 22px;
+    padding-right: 5px;
+  }
+
+  .filter-desktop-option-list {
+    animation: filter-desktop-hide-list 0.4s ease-in-out;
+    display: none;
+    font-size: 16px;
+    left: 50%;
+    list-style: none;
+    margin: 2px 0 0;
+    min-width: 130px;
+    padding: 0;
+    position: absolute;
+    top: 100%;
+    transform: translateX(-50%);
+    width: 100%;
+
+    .filter-desktop-option-item:first-child {
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+
+    .filter-desktop-option-item:last-child {
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+  }
+
+  .filter-desktop-option-item {
+    background-color: $dark-brown-colour;
+    text-align: center;
+    padding: 10px 10px;
+
+    + .filter-desktop-option-item {
+      border-top: 5px solid $black-color;
+    }
+  }
+}
+
+@keyframes filter-desktop-show-list {
+  from {
+    transform: translate(-50%, -10%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(-50%);
+    opacity: 1;
+  }
+}
+
+@keyframes filter-desktop-hide-list {
+  from {
+    transform: translateX(-50%);
+    opacity: 1;
+  }
+
+  to {
+    transform: translate(-50%, -10%);
+    opacity: 0;
+  }
+}
